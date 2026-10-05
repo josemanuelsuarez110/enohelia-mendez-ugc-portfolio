@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# feat-seo-security-ci.sh
-# PR #1: SEO + Seguridad + CI para enohelia-mendez-ugc-portfolio
+# feat-seo-security-ci.sh v2
+# PR #1: SEO + Seguridad + CI + Fix ESLint para enohelia-mendez-ugc-portfolio
 set -euo pipefail
 
 REPO_DIR="${1:-$HOME/ugc-portfolio}"
@@ -10,7 +10,7 @@ BRANCH="feat/seo-security-ci"
 BASE="main"
 PR_TITLE="feat: SEO profesional, headers de seguridad y CI"
 
-echo "==> [1/9] Verificando estado del repo"
+echo "==> [0/11] Verificando estado del repo"
 if [ -n "$(git status --porcelain)" ]; then
   echo "ERROR: hay cambios sin commitear. Abortando."
   git status --short
@@ -19,10 +19,84 @@ fi
 git checkout "$BASE"
 git pull origin "$BASE" --no-edit
 
-echo "==> [2/9] Creando rama $BRANCH"
+echo "==> [1/11] Creando rama $BRANCH"
 git checkout -b "$BRANCH" 2>/dev/null || { echo "La rama ya existe, cambiando a ella."; git checkout "$BRANCH"; }
 
-echo "==> [3/9] Reescribiendo app/layout.tsx con metadata completa"
+echo "==> [2/11] Fix .gitignore (ignorar .vercel y outputs)"
+if ! grep -q "^\.vercel" .gitignore 2>/dev/null; then
+  {
+    echo ""
+    echo "# Vercel"
+    echo ".vercel"
+    echo ""
+    echo "# Build outputs"
+    echo ".next"
+    echo "out"
+    echo "build"
+  } >> .gitignore
+fi
+
+echo "==> [3/11] Fix eslint.config.mjs (ignorar .vercel y build)"
+cat > eslint.config.mjs << 'EOF'
+import { dirname } from "path";
+import { fileURLToPath } from "url";
+import { FlatCompat } from "@eslint/eslintrc";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const compat = new FlatCompat({
+  baseDirectory: __dirname,
+});
+
+const eslintConfig = [
+  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  {
+    ignores: [
+      ".next/**",
+      ".vercel/**",
+      "node_modules/**",
+      "out/**",
+      "build/**",
+      "next-env.d.ts",
+    ],
+  },
+];
+
+export default eslintConfig;
+EOF
+
+echo "==> [4/11] Fix apostrofes en app/page.tsx (react/no-unescaped-entities)"
+# Reemplazos seguros solo en texto JSX (no en atributos)
+python3 - app/page.tsx << 'PYEOF'
+import sys
+import re
+
+path = sys.argv[1]
+with open(path, 'r', encoding='utf-8') as f:
+    content = f.read()
+
+# Reemplazos específicos en textos visibles (entre > y <)
+replacements = [
+    ("Let's Work Together", "Let&apos;s Work Together"),
+    ("Let's Create Together", "Let&apos;s Create Together"),
+    ("I'm a UGC creator", "I&apos;m a UGC creator"),
+    ("doesn't feel like", "doesn&apos;t feel like"),
+    ("Hi, I'm Enohelia", "Hi, I&apos;m Enohelia"),
+    ("Brands I've Worked With", "Brands I&apos;ve Worked With"),
+    ("Let's Create", "Let&apos;s Create"),
+]
+
+for old, new in replacements:
+    content = content.replace(old, new)
+
+with open(path, 'w', encoding='utf-8') as f:
+    f.write(content)
+
+print("OK: apostrofes corregidos en", path)
+PYEOF
+
+echo "==> [5/11] Reescribiendo app/layout.tsx"
 cat > app/layout.tsx << 'EOF'
 import type { Metadata } from "next";
 import "./globals.css";
@@ -53,9 +127,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Enohelia Mendez" }],
   creator: "Enohelia Mendez",
-  alternates: {
-    canonical: "/",
-  },
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -89,9 +161,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  icons: {
-    icon: "/favicon.ico",
-  },
+  icons: { icon: "/favicon.ico" },
 };
 
 const personJsonLd = {
@@ -146,7 +216,7 @@ export default function RootLayout({
 }
 EOF
 
-echo "==> [4/9] Creando app/sitemap.ts"
+echo "==> [6/11] Creando app/sitemap.ts"
 cat > app/sitemap.ts << 'EOF'
 import type { MetadataRoute } from "next";
 
@@ -165,7 +235,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 }
 EOF
 
-echo "==> [5/9] Creando app/robots.ts"
+echo "==> [7/11] Creando app/robots.ts"
 cat > app/robots.ts << 'EOF'
 import type { MetadataRoute } from "next";
 
@@ -173,19 +243,14 @@ const SITE_URL = "https://enohelia-mendez-ugc-portfolio.vercel.app";
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: [
-      {
-        userAgent: "*",
-        allow: "/",
-      },
-    ],
+    rules: [{ userAgent: "*", allow: "/" }],
     sitemap: `${SITE_URL}/sitemap.xml`,
     host: SITE_URL,
   };
 }
 EOF
 
-echo "==> [6/9] Reescribiendo next.config.ts con headers de seguridad"
+echo "==> [8/11] Reescribiendo next.config.ts con headers de seguridad"
 cat > next.config.ts << 'EOF'
 import type { NextConfig } from "next";
 
@@ -201,28 +266,20 @@ const securityHeaders = [
     key: "Strict-Transport-Security",
     value: "max-age=63072000; includeSubDomains; preload",
   },
-  {
-    key: "X-DNS-Prefetch-Control",
-    value: "on",
-  },
+  { key: "X-DNS-Prefetch-Control", value: "on" },
 ];
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   async headers() {
-    return [
-      {
-        source: "/(.*)",
-        headers: securityHeaders,
-      },
-    ];
+    return [{ source: "/(.*)", headers: securityHeaders }];
   },
 };
 
 export default nextConfig;
 EOF
 
-echo "==> [7/9] Creando workflows de CI"
+echo "==> [9/11] Creando workflows de CI"
 mkdir -p .github/workflows
 
 cat > .github/workflows/quality.yml << 'EOF'
@@ -302,7 +359,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 EOF
 
-echo "==> [8/9] Añadiendo estilos para skip link"
+echo "==> [10/11] Añadiendo estilos para skip link"
 if ! grep -q "skipLink" app/globals.css; then
   cat >> app/globals.css << 'EOF'
 
@@ -325,9 +382,14 @@ if ! grep -q "skipLink" app/globals.css; then
 EOF
 fi
 
-echo "==> [9/9] Verificando build y lint"
-npm run lint
-npm run build
+echo "==> [11/11] Verificando lint y build"
+echo ""
+echo "--- Lint ---"
+npm run lint 2>&1 | tail -30
+
+echo ""
+echo "--- Build ---"
+npm run build 2>&1 | tail -30
 
 echo ""
 echo "===================================================="
@@ -341,4 +403,4 @@ echo "Ejecuta:"
 echo "  git add -A"
 echo "  git commit -m \"$PR_TITLE\""
 echo "  git push -u origin $BRANCH"
-echo "  gh pr create --title \"$PR_TITLE\" --body-file /tmp/pr-body.md --base $BASE"
+echo "  gh pr create --title \"$PR_TITLE\" --base $BASE --body \"SEO completo (OG, Twitter Cards, JSON-LD), sitemap, robots, headers de seguridad, workflows CI y fix de lint.\""
