@@ -46,7 +46,7 @@ export default function Home() {
 
           <div className="heroButtons">
             <a href="#work" className="primaryButton">View My Work</a>
-            <a href="#contact" className="secondaryButton">Let's Work Together</a>
+            <a href="#contact" className="secondaryButton">Let&apos;s Work Together</a>
           </div>
         </div>
 
@@ -99,11 +99,11 @@ export default function Home() {
 
         <div className="aboutContent">
           <p className="eyebrow">MEET THE CREATOR</p>
-          <h2>Hi, I'm Enohelia.</h2>
+          <h2>Hi, I&apos;m Enohelia.</h2>
 
           <p>
-            I'm a UGC creator passionate about producing relatable,
-            high-quality content that doesn't feel like traditional
+            I&apos;m a UGC creator passionate about producing relatable,
+            high-quality content that doesn&apos;t feel like traditional
             advertising.
           </p>
 
@@ -230,7 +230,7 @@ export default function Home() {
       <section className="brandsSection">
         <div className="sectionHeading">
           <p className="eyebrow">BRAND COLLABORATIONS</p>
-          <h2>Brands I've Worked With</h2>
+          <h2>Brands I&apos;ve Worked With</h2>
           <p>
             Creating authentic UGC content for beauty, skincare,
             haircare and lifestyle brands.
@@ -259,7 +259,7 @@ export default function Home() {
           </div>
 
           <div className="brandCard">
-            <strong>PALMER'S</strong>
+            <strong>PALMER&apos;S</strong>
             <span>Cocoa Butter</span>
           </div>
 
@@ -281,7 +281,7 @@ export default function Home() {
       </section>
 
       <section id="contact" className="contact">
-        <p className="eyebrow">LET'S CREATE TOGETHER</p>
+        <p className="eyebrow">LET&apos;S CREATE TOGETHER</p>
         <h2>Ready to bring your brand to life?</h2>
 
         <p>
