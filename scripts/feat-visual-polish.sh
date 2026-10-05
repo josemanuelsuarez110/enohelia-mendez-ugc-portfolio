@@ -1,3 +1,11 @@
+#!/usr/bin/env bash
+# feat-visual-polish.sh — Parte 1
+set -euo pipefail
+REPO_DIR="${1:-$HOME/ugc-portfolio}"
+cd "$REPO_DIR"
+
+echo "==> [1/4] Actualizando layout.tsx con Google Fonts + WhatsApp + ScrollProgress"
+cat > "app/[locale]/layout.tsx" << 'EOF'
 import type { Metadata } from "next";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
@@ -120,3 +128,33 @@ export default async function LocaleLayout({
     </html>
   );
 }
+EOF
+
+echo "==> [2/4] Limpiando JMTechLab de messages/en.json y messages/es.json"
+python3 - << 'PYEOF'
+import json
+for path in ["messages/en.json", "messages/es.json"]:
+    with open(path, encoding="utf-8") as f:
+        data = json.load(f)
+    if "footer" in data:
+        data["footer"].pop("builtBy", None)
+        data["footer"].pop("builtByLink", None)
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    print(f"OK: limpiado {path}")
+PYEOF
+
+echo "==> [3/4] Quitando línea de JMTechLab en page.tsx"
+python3 - << 'PYEOF'
+import re
+path = "app/[locale]/page.tsx"
+with open(path, encoding="utf-8") as f:
+    content = f.read()
+content = re.sub(r'\s*<p>\{t\("footer\.builtBy"\)\}.*?</p>\n', "\n", content, flags=re.DOTALL)
+with open(path, "w", encoding="utf-8") as f:
+    f.write(content)
+print("OK: page.tsx limpio")
+PYEOF
+
+echo "==> [4/4] Parte 1 completada"
+echo "Ahora ejecuta la Parte 2: scripts/feat-visual-polish-p2.sh"

@@ -23,7 +23,13 @@
     "badgeSubtitle": "Creadora"
   },
   "marquee": {
-    "items": ["BELLEZA", "CUIDADO DE LA PIEL", "ESTILO DE VIDA", "BIENESTAR", "DEMOS DE PRODUCTO"]
+    "items": [
+      "BELLEZA",
+      "CUIDADO DE LA PIEL",
+      "ESTILO DE VIDA",
+      "BIENESTAR",
+      "DEMOS DE PRODUCTO"
+    ]
   },
   "work": {
     "eyebrow": "CONTENIDO SELECCIONADO",
@@ -63,12 +69,30 @@
     "eyebrow": "LO QUE CREO",
     "title": "Servicios UGC",
     "items": {
-      "productDemo": { "title": "Demo de producto", "desc": "Demostraciones claras y atractivas que muestran tu producto en acción." },
-      "testimonials": { "title": "Testimonios", "desc": "Videos estilo testimonio natural, diseñados para generar confianza." },
-      "unboxing": { "title": "Unboxing", "desc": "Primeras impresiones auténticas y contenido de unboxing visualmente atractivo." },
-      "lifestyle": { "title": "Estilo de vida", "desc": "Productos integrados de forma natural en momentos cotidianos cercanos." },
-      "beauty": { "title": "Belleza y cuidado de la piel", "desc": "Contenido de belleza centrado en el producto, rutinas y conceptos antes/después." },
-      "voiceover": { "title": "Voz en off", "desc": "Storytelling corto con voz en off clara y visuales del producto." }
+      "productDemo": {
+        "title": "Demo de producto",
+        "desc": "Demostraciones claras y atractivas que muestran tu producto en acción."
+      },
+      "testimonials": {
+        "title": "Testimonios",
+        "desc": "Videos estilo testimonio natural, diseñados para generar confianza."
+      },
+      "unboxing": {
+        "title": "Unboxing",
+        "desc": "Primeras impresiones auténticas y contenido de unboxing visualmente atractivo."
+      },
+      "lifestyle": {
+        "title": "Estilo de vida",
+        "desc": "Productos integrados de forma natural en momentos cotidianos cercanos."
+      },
+      "beauty": {
+        "title": "Belleza y cuidado de la piel",
+        "desc": "Contenido de belleza centrado en el producto, rutinas y conceptos antes/después."
+      },
+      "voiceover": {
+        "title": "Voz en off",
+        "desc": "Storytelling corto con voz en off clara y visuales del producto."
+      }
     }
   },
   "brands": {
@@ -81,27 +105,54 @@
         "name": "Nurilounge",
         "description": "Plataforma global de creadores K-beauty",
         "brands": {
-          "lavoir": { "name": "LAVOIR", "category": "Hogar y estilo de vida" },
-          "boostion": { "name": "BOOSTION", "category": "Belleza y bienestar" },
-          "wishes": { "name": "9WISHES", "category": "Cuidado de la piel" },
-          "flouren": { "name": "FLOUREN", "category": "Belleza" }
+          "lavoir": {
+            "name": "LAVOIR",
+            "category": "Hogar y estilo de vida"
+          },
+          "boostion": {
+            "name": "BOOSTION",
+            "category": "Belleza y bienestar"
+          },
+          "wishes": {
+            "name": "9WISHES",
+            "category": "Cuidado de la piel"
+          },
+          "flouren": {
+            "name": "FLOUREN",
+            "category": "Belleza"
+          }
         }
       },
       "picky": {
         "name": "Picky",
         "description": "App de creadores K-beauty",
         "brands": {
-          "mediheal": { "name": "MEDIHEAL", "category": "Cuidado de la piel" },
-          "wishes": { "name": "9WISHES", "category": "Cuidado de la piel" }
+          "mediheal": {
+            "name": "MEDIHEAL",
+            "category": "Cuidado de la piel"
+          },
+          "wishes": {
+            "name": "9WISHES",
+            "category": "Cuidado de la piel"
+          }
         }
       },
       "influenster": {
         "name": "Influenster",
         "description": "Plataforma de reviews de productos",
         "brands": {
-          "palmers": { "name": "PALMER'S", "category": "Manteca de cacao" },
-          "headShoulders": { "name": "HEAD & SHOULDERS", "category": "Cuidado del cuero cabelludo" },
-          "mediheal": { "name": "MEDIHEAL", "category": "Cuidado de la piel" }
+          "palmers": {
+            "name": "PALMER'S",
+            "category": "Manteca de cacao"
+          },
+          "headShoulders": {
+            "name": "HEAD & SHOULDERS",
+            "category": "Cuidado del cuero cabelludo"
+          },
+          "mediheal": {
+            "name": "MEDIHEAL",
+            "category": "Cuidado de la piel"
+          }
         }
       }
     }
@@ -233,8 +284,6 @@
     "tagline": "Creadora UGC · Belleza · Estilo de vida · Bienestar",
     "contact": "Contacto",
     "follow": "Sígueme",
-    "rights": "Todos los derechos reservados.",
-    "builtBy": "Sitio creado por",
-    "builtByLink": "JMTechLab"
+    "rights": "Todos los derechos reservados."
   }
 }

@@ -1,3 +1,11 @@
+#!/usr/bin/env bash
+# feat-visual-polish-p2.sh — Parte 2: CSS premium
+set -euo pipefail
+REPO_DIR="${1:-$HOME/ugc-portfolio}"
+cd "$REPO_DIR"
+
+echo "==> Reescribiendo app/[locale]/globals.css"
+cat > "app/[locale]/globals.css" << 'CSS_EOF'
 @import "tailwindcss";
 
 :root {
@@ -386,3 +394,17 @@ h1, h2, h3, .logo {
   .stats { gap: 20px; }
   .stats strong { font-size: 28px; }
 }
+CSS_EOF
+
+echo "==> Verificando lint"
+npm run lint 2>&1 | tail -15
+
+echo "==> Verificando build"
+rm -rf .next node_modules/.cache
+npm run build 2>&1 | tail -25
+
+echo ""
+echo "===================================================="
+echo "✅ Rediseño visual aplicado"
+echo "===================================================="
+git status --short

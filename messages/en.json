@@ -23,7 +23,13 @@
     "badgeSubtitle": "Creator"
   },
   "marquee": {
-    "items": ["BEAUTY", "SKINCARE", "LIFESTYLE", "WELLNESS", "PRODUCT DEMOS"]
+    "items": [
+      "BEAUTY",
+      "SKINCARE",
+      "LIFESTYLE",
+      "WELLNESS",
+      "PRODUCT DEMOS"
+    ]
   },
   "work": {
     "eyebrow": "SELECTED CONTENT",
@@ -63,12 +69,30 @@
     "eyebrow": "WHAT I CREATE",
     "title": "UGC Services",
     "items": {
-      "productDemo": { "title": "Product Demo", "desc": "Clear and engaging demonstrations showing your product in action." },
-      "testimonials": { "title": "Testimonials", "desc": "Natural testimonial-style videos designed to build trust." },
-      "unboxing": { "title": "Unboxing", "desc": "Authentic first impressions and visually engaging unboxing content." },
-      "lifestyle": { "title": "Lifestyle", "desc": "Products naturally integrated into relatable everyday moments." },
-      "beauty": { "title": "Beauty & Skincare", "desc": "Product-focused beauty content, routines and before-and-after concepts." },
-      "voiceover": { "title": "Voiceover", "desc": "Short-form storytelling with clear voiceover and product visuals." }
+      "productDemo": {
+        "title": "Product Demo",
+        "desc": "Clear and engaging demonstrations showing your product in action."
+      },
+      "testimonials": {
+        "title": "Testimonials",
+        "desc": "Natural testimonial-style videos designed to build trust."
+      },
+      "unboxing": {
+        "title": "Unboxing",
+        "desc": "Authentic first impressions and visually engaging unboxing content."
+      },
+      "lifestyle": {
+        "title": "Lifestyle",
+        "desc": "Products naturally integrated into relatable everyday moments."
+      },
+      "beauty": {
+        "title": "Beauty & Skincare",
+        "desc": "Product-focused beauty content, routines and before-and-after concepts."
+      },
+      "voiceover": {
+        "title": "Voiceover",
+        "desc": "Short-form storytelling with clear voiceover and product visuals."
+      }
     }
   },
   "brands": {
@@ -81,27 +105,54 @@
         "name": "Nurilounge",
         "description": "Global K-beauty creator platform",
         "brands": {
-          "lavoir": { "name": "LAVOIR", "category": "Home & Lifestyle" },
-          "boostion": { "name": "BOOSTION", "category": "Beauty & Wellness" },
-          "wishes": { "name": "9WISHES", "category": "Skincare" },
-          "flouren": { "name": "FLOUREN", "category": "Beauty" }
+          "lavoir": {
+            "name": "LAVOIR",
+            "category": "Home & Lifestyle"
+          },
+          "boostion": {
+            "name": "BOOSTION",
+            "category": "Beauty & Wellness"
+          },
+          "wishes": {
+            "name": "9WISHES",
+            "category": "Skincare"
+          },
+          "flouren": {
+            "name": "FLOUREN",
+            "category": "Beauty"
+          }
         }
       },
       "picky": {
         "name": "Picky",
         "description": "K-beauty creator app",
         "brands": {
-          "mediheal": { "name": "MEDIHEAL", "category": "Skincare" },
-          "wishes": { "name": "9WISHES", "category": "Skincare" }
+          "mediheal": {
+            "name": "MEDIHEAL",
+            "category": "Skincare"
+          },
+          "wishes": {
+            "name": "9WISHES",
+            "category": "Skincare"
+          }
         }
       },
       "influenster": {
         "name": "Influenster",
         "description": "Product review platform",
         "brands": {
-          "palmers": { "name": "PALMER'S", "category": "Cocoa Butter" },
-          "headShoulders": { "name": "HEAD & SHOULDERS", "category": "Scalp Care" },
-          "mediheal": { "name": "MEDIHEAL", "category": "Skincare" }
+          "palmers": {
+            "name": "PALMER'S",
+            "category": "Cocoa Butter"
+          },
+          "headShoulders": {
+            "name": "HEAD & SHOULDERS",
+            "category": "Scalp Care"
+          },
+          "mediheal": {
+            "name": "MEDIHEAL",
+            "category": "Skincare"
+          }
         }
       }
     }
@@ -233,8 +284,6 @@
     "tagline": "UGC Creator · Beauty · Lifestyle · Wellness",
     "contact": "Contact",
     "follow": "Follow",
-    "rights": "All rights reserved.",
-    "builtBy": "Site built by",
-    "builtByLink": "JMTechLab"
+    "rights": "All rights reserved."
   }
 }
