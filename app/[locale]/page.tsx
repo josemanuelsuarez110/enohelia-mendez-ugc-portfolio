@@ -1,5 +1,5 @@
+import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
 
 const videoKeys = [
   { src: "/videos/ugc-01-web.mp4", poster: "/videos/ugc-01-poster.jpg", brandKey: "lavoir" },
@@ -8,11 +8,17 @@ const videoKeys = [
 ] as const;
 
 const serviceKeys = ["productDemo", "testimonials", "unboxing", "lifestyle", "beauty", "voiceover"] as const;
-const brandKeys = ["lavoir", "boostion", "wishes", "flouren", "palmers", "mediheal", "headShoulders", "kiko"] as const;
+const platformKeys = ["nurilounge", "picky", "influenster"] as const;
+
+type PlatformBrand = { name: string; category: string };
 
 export default function Home() {
   const t = useTranslations();
   const marqueeItems = t.raw("marquee.items") as string[];
+  const testimonials = t.raw("testimonials.items") as { quote: string; author: string; role: string }[];
+  const caseResults = t.raw("caseStudy.results") as string[];
+  const caseDeliverables = t.raw("caseStudy.deliverables") as string[];
+  const faqItems = t.raw("faq.items") as { question: string; answer: string }[];
 
   return (
     <main>
@@ -22,6 +28,7 @@ export default function Home() {
           <a href="#work">{t("nav.work")}</a>
           <a href="#about">{t("nav.about")}</a>
           <a href="#services">{t("nav.services")}</a>
+          <a href="#brands">{t("nav.brands")}</a>
           <a href="#contact" className="navButton">{t("nav.contact")}</a>
         </div>
       </nav>
@@ -40,8 +47,14 @@ export default function Home() {
           </div>
         </div>
         <div className="heroImage">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/enohelia-hero.png" alt={t("hero.imageAlt")} />
+          <Image
+            src="/images/enohelia-hero.png"
+            alt={t("hero.imageAlt")}
+            width={600}
+            height={800}
+            priority
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
           <div className="imageBadge">
             <strong>{t("hero.badgeTitle")}</strong>
             <span>{t("hero.badgeSubtitle")}</span>
@@ -70,6 +83,8 @@ export default function Home() {
                   controls
                   playsInline
                   preload="none"
+                  width={720}
+                  height={1280}
                   aria-label={t("work.videoAlt", { brand })}
                 />
                 <h3>{brand}</h3>
@@ -81,8 +96,14 @@ export default function Home() {
 
       <section id="about" className="about">
         <div className="aboutImage">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/enohelia-about.png" alt={t("about.imageAlt")} />
+          <Image
+            src="/images/enohelia-about.png"
+            alt={t("about.imageAlt")}
+            width={600}
+            height={800}
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
         </div>
         <div className="aboutContent">
           <p className="eyebrow">{t("about.eyebrow")}</p>
@@ -132,18 +153,115 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="brandsSection">
+      <section id="brands" className="brandsSection">
         <div className="sectionHeading">
           <p className="eyebrow">{t("brands.eyebrow")}</p>
           <h2>{t("brands.title")}</h2>
           <p>{t("brands.subtitle")}</p>
         </div>
-        <div className="brandsGrid">
-          {brandKeys.map((key) => (
-            <div className="brandCard" key={key}>
-              <strong>{key.toUpperCase()}</strong>
-              <span>{t(`brands.items.${key}`)}</span>
+
+        <div className="platformsContainer">
+          {platformKeys.map((pk) => {
+            const brands = t.raw(`brands.platforms.${pk}.brands`) as Record<string, PlatformBrand>;
+            return (
+              <div className="platformBlock" key={pk}>
+                <div className="platformHeader">
+                  <span className="platformBadge">{t("brands.via")} {t(`brands.platforms.${pk}.name`)}</span>
+                  <p className="platformDesc">{t(`brands.platforms.${pk}.description`)}</p>
+                </div>
+                <div className="brandsGrid">
+                  {Object.entries(brands).map(([key, brand]) => (
+                    <div className="brandCard" key={`${pk}-${key}`}>
+                      <strong>{brand.name}</strong>
+                      <span>{brand.category}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className="caseStudy">
+        <div className="sectionHeading">
+          <p className="eyebrow">{t("caseStudy.eyebrow")}</p>
+          <h2>{t("caseStudy.title")}</h2>
+        </div>
+        <div className="caseStudyGrid">
+          <div className="caseStudyMeta">
+            <div><strong>{t("caseStudy.brand")}</strong><span>{t("caseStudy.origin")}</span></div>
+            <div><strong>{t("caseStudy.category")}</strong><span>{t("caseStudy.format")}</span></div>
+            <div><strong>{t("caseStudy.platforms")}</strong><span>{t("caseStudy.category")}</span></div>
+          </div>
+          <p className="caseStudyAbout">{t("caseStudy.about")}</p>
+          <div className="caseStudyColumns">
+            <div>
+              <h3>{t("caseStudy.resultsTitle")}</h3>
+              <ul>{caseResults.map((r) => <li key={r}>{r}</li>)}</ul>
             </div>
+            <div>
+              <h3>{t("caseStudy.deliverablesTitle")}</h3>
+              <ul>{caseDeliverables.map((d) => <li key={d}>{d}</li>)}</ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="testimonials">
+        <div className="sectionHeading">
+          <p className="eyebrow">{t("testimonials.eyebrow")}</p>
+          <h2>{t("testimonials.title")}</h2>
+        </div>
+        <div className="testimonialGrid">
+          {testimonials.map((item, i) => (
+            <blockquote className="testimonialCard" key={i}>
+              <p>&ldquo;{item.quote}&rdquo;</p>
+              <footer>
+                <strong>{item.author}</strong>
+                <span>{item.role}</span>
+              </footer>
+            </blockquote>
+          ))}
+        </div>
+      </section>
+
+      <section className="mediaKit">
+        <div className="sectionHeading">
+          <p className="eyebrow">{t("mediaKit.eyebrow")}</p>
+          <h2>{t("mediaKit.title")}</h2>
+          <p>{t("mediaKit.subtitle")}</p>
+        </div>
+        <div className="mediaKitGrid">
+          {(["basic", "standard", "premium"] as const).map((tier) => {
+            const features = t.raw(`mediaKit.tiers.${tier}.features`) as string[];
+            return (
+              <div className={`mediaKitCard mediaKitCard--${tier}`} key={tier}>
+                <h3>{t(`mediaKit.tiers.${tier}.name`)}</h3>
+                <p>{t(`mediaKit.tiers.${tier}.description`)}</p>
+                <ul>{features.map((f) => <li key={f}>{f}</li>)}</ul>
+              </div>
+            );
+          })}
+        </div>
+        <div className="mediaKitCta">
+          <a href="mailto:enoheliamendezmendez@gmail.com?subject=Media%20Kit%20Request" className="primaryButton">
+            {t("mediaKit.cta")}
+          </a>
+        </div>
+      </section>
+
+      <section className="faq">
+        <div className="sectionHeading">
+          <p className="eyebrow">{t("faq.eyebrow")}</p>
+          <h2>{t("faq.title")}</h2>
+        </div>
+        <div className="faqList">
+          {faqItems.map((item, i) => (
+            <details className="faqItem" key={i}>
+              <summary>{item.question}</summary>
+              <p>{item.answer}</p>
+            </details>
           ))}
         </div>
       </section>
@@ -160,9 +278,25 @@ export default function Home() {
         </div>
       </section>
 
-      <footer>
-        <strong>{t("footer.name")}</strong>
-        <p>{t("footer.tagline")}</p>
+      <footer className="siteFooter">
+        <div className="footerContent">
+          <div>
+            <strong>{t("footer.name")}</strong>
+            <p>{t("footer.tagline")}</p>
+          </div>
+          <div>
+            <a href="mailto:enoheliamendezmendez@gmail.com">enoheliamendezmendez@gmail.com</a>
+            <div className="footerSocials">
+              <a href="https://www.tiktok.com/enomendez0" target="_blank" rel="noopener noreferrer" aria-label="TikTok">TikTok</a>
+              <a href="https://www.instagram.com/eno_mendez" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+              <a href="https://www.facebook.com/eno.mendez" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
+            </div>
+          </div>
+        </div>
+        <div className="footerBottom">
+          <p>© {new Date().getFullYear()} {t("footer.name")} · {t("footer.rights")}</p>
+          <p>{t("footer.builtBy")} <a href="https://jmtechlab.do" target="_blank" rel="noopener noreferrer">{t("footer.builtByLink")}</a></p>
+        </div>
       </footer>
     </main>
   );

@@ -7,6 +7,7 @@
     "work": "Work",
     "about": "About",
     "services": "Services",
+    "brands": "Brands",
     "contact": "Work With Me",
     "langLabel": "Language"
   },
@@ -53,6 +54,7 @@
     "title": "38K+ Community",
     "subtitle": "An engaged audience across TikTok, Instagram and Facebook.",
     "followers": "Followers",
+    "views": "Views",
     "tiktok": "TIKTOK",
     "instagram": "INSTAGRAM",
     "facebook": "FACEBOOK"
@@ -72,17 +74,153 @@
   "brands": {
     "eyebrow": "BRAND COLLABORATIONS",
     "title": "Brands I've Worked With",
-    "subtitle": "Creating authentic UGC content for beauty, skincare, haircare and lifestyle brands.",
-    "items": {
-      "lavoir": "Home & Lifestyle",
-      "boostion": "Beauty & Wellness",
-      "wishes": "Skincare",
-      "flouren": "Beauty",
-      "palmers": "Cocoa Butter",
-      "mediheal": "Skincare",
-      "headShoulders": "Scalp Serum",
-      "kiko": "Lip Volume"
+    "subtitle": "Authentic UGC content created through leading creator platforms.",
+    "via": "via",
+    "platforms": {
+      "nurilounge": {
+        "name": "Nurilounge",
+        "description": "Global K-beauty creator platform",
+        "brands": {
+          "lavoir": { "name": "LAVOIR", "category": "Home & Lifestyle" },
+          "boostion": { "name": "BOOSTION", "category": "Beauty & Wellness" },
+          "wishes": { "name": "9WISHES", "category": "Skincare" },
+          "flouren": { "name": "FLOUREN", "category": "Beauty" }
+        }
+      },
+      "picky": {
+        "name": "Picky",
+        "description": "K-beauty creator app",
+        "brands": {
+          "mediheal": { "name": "MEDIHEAL", "category": "Skincare" },
+          "wishes": { "name": "9WISHES", "category": "Skincare" }
+        }
+      },
+      "influenster": {
+        "name": "Influenster",
+        "description": "Product review platform",
+        "brands": {
+          "palmers": { "name": "PALMER'S", "category": "Cocoa Butter" },
+          "headShoulders": { "name": "HEAD & SHOULDERS", "category": "Scalp Care" },
+          "mediheal": { "name": "MEDIHEAL", "category": "Skincare" }
+        }
+      }
     }
+  },
+  "caseStudy": {
+    "eyebrow": "CASE STUDY",
+    "title": "MEDIHEAL × Picky + Influenster",
+    "brand": "MEDIHEAL",
+    "origin": "South Korea",
+    "platforms": "Picky + Influenster",
+    "category": "Skincare",
+    "format": "Product demo + review + before/after",
+    "about": "MEDIHEAL is a Korean skincare brand known for its sheet masks, toner pads and serums, with a strong global presence and active creator campaigns.",
+    "resultsTitle": "Results",
+    "results": [
+      "[Pending metric: total views]",
+      "[Pending metric: engagement rate]",
+      "[Pending metric: CTR / conversions]",
+      "[Pending metric: use in paid ads]"
+    ],
+    "deliverablesTitle": "Deliverables",
+    "deliverables": [
+      "[N] short-form videos",
+      "[N] photos",
+      "Commercial use: [yes/no]",
+      "Whitelisting: [yes/no]"
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "TESTIMONIALS",
+    "title": "What Brands Say",
+    "items": [
+      {
+        "quote": "[Pending testimonial from brand]",
+        "author": "[Name]",
+        "role": "[Role], [Brand]"
+      },
+      {
+        "quote": "[Pending testimonial from brand]",
+        "author": "[Name]",
+        "role": "[Role], [Brand]"
+      },
+      {
+        "quote": "[Pending testimonial from brand]",
+        "author": "[Name]",
+        "role": "[Role], [Brand]"
+      }
+    ]
+  },
+  "mediaKit": {
+    "eyebrow": "MEDIA KIT",
+    "title": "Work With Me",
+    "subtitle": "Flexible packages for brands of all sizes.",
+    "cta": "Request Media Kit",
+    "tiers": {
+      "basic": {
+        "name": "Basic",
+        "description": "Single short-form video",
+        "features": [
+          "1 video (15-30s)",
+          "1 revision",
+          "Raw footage included",
+          "Delivery in 5-7 days"
+        ]
+      },
+      "standard": {
+        "name": "Standard",
+        "description": "Video bundle",
+        "features": [
+          "3 videos (15-30s)",
+          "2 revisions",
+          "Raw footage included",
+          "Commercial use",
+          "Delivery in 10-14 days"
+        ],
+        "badge": "Most popular"
+      },
+      "premium": {
+        "name": "Premium",
+        "description": "Full campaign",
+        "features": [
+          "5+ videos",
+          "Unlimited revisions",
+          "Raw footage + photos",
+          "Commercial use + whitelisting",
+          "Priority delivery"
+        ]
+      }
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "How long does delivery take?",
+        "answer": "Most single videos are delivered within 5-7 days. Bundles and campaigns take 10-14 days depending on scope."
+      },
+      {
+        "question": "Do you offer revisions?",
+        "answer": "Yes. Basic includes 1 revision, Standard 2, and Premium has unlimited revisions within the agreed scope."
+      },
+      {
+        "question": "What is your process?",
+        "answer": "Brief → concept → filming → editing → delivery → revision (if needed). I keep you updated at every step."
+      },
+      {
+        "question": "Do you work in English and Spanish?",
+        "answer": "Yes. I can create content in both languages, or voiceover in either."
+      },
+      {
+        "question": "Do you offer commercial use and whitelisting?",
+        "answer": "Yes. Commercial use is included in Standard and Premium. Whitelisting is available in Premium or as an add-on."
+      },
+      {
+        "question": "How do I contact you?",
+        "answer": "Email me at enoheliamendezmendez@gmail.com or use the contact button below."
+      }
+    ]
   },
   "contact": {
     "eyebrow": "LET'S CREATE TOGETHER",
@@ -93,6 +231,10 @@
   "footer": {
     "name": "ENOHELIA MENDEZ",
     "tagline": "UGC Creator · Beauty · Lifestyle · Wellness",
-    "builtBy": "Site built by JMTechLab"
+    "contact": "Contact",
+    "follow": "Follow",
+    "rights": "All rights reserved.",
+    "builtBy": "Site built by",
+    "builtByLink": "JMTechLab"
   }
 }

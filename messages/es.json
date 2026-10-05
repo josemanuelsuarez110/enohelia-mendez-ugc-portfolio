@@ -7,6 +7,7 @@
     "work": "Trabajo",
     "about": "Sobre mí",
     "services": "Servicios",
+    "brands": "Marcas",
     "contact": "Trabajemos",
     "langLabel": "Idioma"
   },
@@ -53,6 +54,7 @@
     "title": "Comunidad de 38K+",
     "subtitle": "Una audiencia comprometida en TikTok, Instagram y Facebook.",
     "followers": "Seguidores",
+    "views": "Visualizaciones",
     "tiktok": "TIKTOK",
     "instagram": "INSTAGRAM",
     "facebook": "FACEBOOK"
@@ -72,17 +74,153 @@
   "brands": {
     "eyebrow": "COLABORACIONES DE MARCA",
     "title": "Marcas con las que he trabajado",
-    "subtitle": "Creando contenido UGC auténtico para marcas de belleza, cuidado de la piel, cabello y estilo de vida.",
-    "items": {
-      "lavoir": "Hogar y estilo de vida",
-      "boostion": "Belleza y bienestar",
-      "wishes": "Cuidado de la piel",
-      "flouren": "Belleza",
-      "palmers": "Manteca de cacao",
-      "mediheal": "Cuidado de la piel",
-      "headShoulders": "Sérum para cuero cabelludo",
-      "kiko": "Volumen de labios"
+    "subtitle": "Contenido UGC auténtico creado a través de las principales plataformas de creadores.",
+    "via": "vía",
+    "platforms": {
+      "nurilounge": {
+        "name": "Nurilounge",
+        "description": "Plataforma global de creadores K-beauty",
+        "brands": {
+          "lavoir": { "name": "LAVOIR", "category": "Hogar y estilo de vida" },
+          "boostion": { "name": "BOOSTION", "category": "Belleza y bienestar" },
+          "wishes": { "name": "9WISHES", "category": "Cuidado de la piel" },
+          "flouren": { "name": "FLOUREN", "category": "Belleza" }
+        }
+      },
+      "picky": {
+        "name": "Picky",
+        "description": "App de creadores K-beauty",
+        "brands": {
+          "mediheal": { "name": "MEDIHEAL", "category": "Cuidado de la piel" },
+          "wishes": { "name": "9WISHES", "category": "Cuidado de la piel" }
+        }
+      },
+      "influenster": {
+        "name": "Influenster",
+        "description": "Plataforma de reviews de productos",
+        "brands": {
+          "palmers": { "name": "PALMER'S", "category": "Manteca de cacao" },
+          "headShoulders": { "name": "HEAD & SHOULDERS", "category": "Cuidado del cuero cabelludo" },
+          "mediheal": { "name": "MEDIHEAL", "category": "Cuidado de la piel" }
+        }
+      }
     }
+  },
+  "caseStudy": {
+    "eyebrow": "CASO DE ESTUDIO",
+    "title": "MEDIHEAL × Picky + Influenster",
+    "brand": "MEDIHEAL",
+    "origin": "Corea del Sur",
+    "platforms": "Picky + Influenster",
+    "category": "Cuidado de la piel",
+    "format": "Demo de producto + review + antes/después",
+    "about": "MEDIHEAL es una marca coreana de skincare conocida por sus mascarillas, pads y serums, con una fuerte presencia global y campañas activas de creadores.",
+    "resultsTitle": "Resultados",
+    "results": [
+      "[Métrica pendiente: views totales]",
+      "[Métrica pendiente: engagement rate]",
+      "[Métrica pendiente: CTR / conversiones]",
+      "[Métrica pendiente: uso en ads pagados]"
+    ],
+    "deliverablesTitle": "Entregables",
+    "deliverables": [
+      "[N] videos cortos",
+      "[N] fotos",
+      "Uso comercial: [sí/no]",
+      "Whitelisting: [sí/no]"
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "TESTIMONIOS",
+    "title": "Lo que dicen las marcas",
+    "items": [
+      {
+        "quote": "[Testimonio pendiente de marca]",
+        "author": "[Nombre]",
+        "role": "[Cargo], [Marca]"
+      },
+      {
+        "quote": "[Testimonio pendiente de marca]",
+        "author": "[Nombre]",
+        "role": "[Cargo], [Marca]"
+      },
+      {
+        "quote": "[Testimonio pendiente de marca]",
+        "author": "[Nombre]",
+        "role": "[Cargo], [Marca]"
+      }
+    ]
+  },
+  "mediaKit": {
+    "eyebrow": "MEDIA KIT",
+    "title": "Trabajemos juntos",
+    "subtitle": "Paquetes flexibles para marcas de todos los tamaños.",
+    "cta": "Solicitar Media Kit",
+    "tiers": {
+      "basic": {
+        "name": "Básico",
+        "description": "Un video corto",
+        "features": [
+          "1 video (15-30s)",
+          "1 revisión",
+          "Material en bruto incluido",
+          "Entrega en 5-7 días"
+        ]
+      },
+      "standard": {
+        "name": "Estándar",
+        "description": "Paquete de videos",
+        "features": [
+          "3 videos (15-30s)",
+          "2 revisiones",
+          "Material en bruto incluido",
+          "Uso comercial",
+          "Entrega en 10-14 días"
+        ],
+        "badge": "Más popular"
+      },
+      "premium": {
+        "name": "Premium",
+        "description": "Campaña completa",
+        "features": [
+          "5+ videos",
+          "Revisiones ilimitadas",
+          "Material en bruto + fotos",
+          "Uso comercial + whitelisting",
+          "Entrega prioritaria"
+        ]
+      }
+    }
+  },
+  "faq": {
+    "eyebrow": "PREGUNTAS FRECUENTES",
+    "title": "Preguntas frecuentes",
+    "items": [
+      {
+        "question": "¿Cuánto tardas en entregar?",
+        "answer": "La mayoría de videos individuales se entregan en 5-7 días. Paquetes y campañas toman 10-14 días según el alcance."
+      },
+      {
+        "question": "¿Haces revisiones?",
+        "answer": "Sí. Básico incluye 1 revisión, Estándar 2, y Premium tiene revisiones ilimitadas dentro del alcance acordado."
+      },
+      {
+        "question": "¿Cuál es tu proceso?",
+        "answer": "Brief → concepto → grabación → edición → entrega → revisión (si hace falta). Te mantengo informada en cada paso."
+      },
+      {
+        "question": "¿Trabajas en español e inglés?",
+        "answer": "Sí. Puedo crear contenido en ambos idiomas, o voz en off en cualquiera de los dos."
+      },
+      {
+        "question": "¿Ofreces uso comercial y whitelisting?",
+        "answer": "Sí. El uso comercial está incluido en Estándar y Premium. El whitelisting está disponible en Premium o como add-on."
+      },
+      {
+        "question": "¿Cómo te contacto?",
+        "answer": "Escríbeme a enoheliamendezmendez@gmail.com o usa el botón de contacto abajo."
+      }
+    ]
   },
   "contact": {
     "eyebrow": "CREEMOS JUNTOS",
@@ -93,6 +231,10 @@
   "footer": {
     "name": "ENOHELIA MENDEZ",
     "tagline": "Creadora UGC · Belleza · Estilo de vida · Bienestar",
-    "builtBy": "Sitio creado por JMTechLab"
+    "contact": "Contacto",
+    "follow": "Sígueme",
+    "rights": "Todos los derechos reservados.",
+    "builtBy": "Sitio creado por",
+    "builtByLink": "JMTechLab"
   }
 }
