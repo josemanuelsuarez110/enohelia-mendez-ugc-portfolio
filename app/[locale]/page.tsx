@@ -295,7 +295,6 @@ export default function Home() {
         </div>
         <div className="footerBottom">
           <p>© {new Date().getFullYear()} {t("footer.name")} · {t("footer.rights")}</p>
-          <p>{t("footer.builtBy")} <a href="https://jmtechlab.do" target="_blank" rel="noopener noreferrer">{t("footer.builtByLink")}</a></p>
         </div>
       </footer>
     </main>
