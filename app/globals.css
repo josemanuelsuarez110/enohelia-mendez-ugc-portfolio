@@ -591,3 +591,17 @@ footer p {
     font-size: 14px;
   }
 }
+
+/* Accessibility: skip link */
+.skipLink {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--foreground);
+  color: var(--white);
+  padding: 12px 20px;
+  border-radius: 0 0 8px 0;
+  z-index: 9999;
+  font-weight: 700;
+}
+.skipLink:focus { left: 0; }

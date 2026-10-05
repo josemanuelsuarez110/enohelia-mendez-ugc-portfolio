@@ -1,0 +1,36 @@
+name: Portfolio Quality Gate
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Check tracked env files
+        run: |
+          if git ls-files | grep -Eq '(^|/)\.env($|\.)'; then
+            echo "ERROR: tracked env file"; exit 1
+          fi
+      - name: Check tracked node_modules
+        run: |
+          if git ls-files | grep -q '^node_modules/'; then
+            echo "ERROR: node_modules tracked"; exit 1
+          fi
+      - name: Lint
+        run: npm run lint
+      - name: Production build
+        run: npm run build
+      - name: Audit (production, blocking)
+        run: npm audit --omit=dev --audit-level=high
+      - name: Audit (dev, informational)
+        continue-on-error: true
+        run: npm audit --audit-level=high || true
