@@ -120,6 +120,10 @@
           "flouren": {
             "name": "FLOUREN",
             "category": "Beauty"
+          },
+          "imfrom": {
+            "name": "I'M FROM",
+            "category": "Skincare"
           }
         }
       },
