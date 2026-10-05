@@ -158,6 +158,20 @@
             "category": "Skincare"
           }
         }
+      },
+      "direct": {
+        "name": "Direct Collaborations",
+        "description": "Direct partnerships with brands",
+        "brands": {
+          "kikoLips": {
+            "name": "KIKO MILANO LIPS",
+            "category": "Lips"
+          },
+          "morphe": {
+            "name": "MORPHE",
+            "category": "Makeup Brushes"
+          }
+        }
       }
     }
   },

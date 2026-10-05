@@ -8,7 +8,7 @@ const videoKeys = [
 ] as const;
 
 const serviceKeys = ["productDemo", "testimonials", "unboxing", "lifestyle", "beauty", "voiceover"] as const;
-const platformKeys = ["nurilounge", "picky", "influenster"] as const;
+const platformKeys = ["nurilounge", "picky", "influenster", "direct"] as const;
 
 type PlatformBrand = { name: string; category: string };
 

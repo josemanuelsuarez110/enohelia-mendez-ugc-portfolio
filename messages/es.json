@@ -158,6 +158,20 @@
             "category": "Cuidado de la piel"
           }
         }
+      },
+      "direct": {
+        "name": "Colaboraciones directas",
+        "description": "Alianzas directas con marcas",
+        "brands": {
+          "kikoLips": {
+            "name": "KIKO MILANO LIPS",
+            "category": "Labiales"
+          },
+          "morphe": {
+            "name": "MORPHE",
+            "category": "Brochas de maquillaje"
+          }
+        }
       }
     }
   },
