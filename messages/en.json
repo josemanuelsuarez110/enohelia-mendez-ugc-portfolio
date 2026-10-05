@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "title": "Enohelia Mendez | UGC Creator",
+    "description": "UGC creator specializing in beauty, skincare, lifestyle and wellness content. Authentic short-form video for brands that want real results."
+  },
+  "nav": {
+    "work": "Work",
+    "about": "About",
+    "services": "Services",
+    "contact": "Work With Me",
+    "langLabel": "Language"
+  },
+  "hero": {
+    "eyebrow": "UGC CREATOR · BEAUTY · LIFESTYLE · WELLNESS",
+    "titleLine1": "Content that feels real.",
+    "titleLine2": "Stories that connect.",
+    "text": "I create authentic, scroll-stopping content that helps brands connect with real people and turn attention into action.",
+    "ctaPrimary": "View My Work",
+    "ctaSecondary": "Let's Work Together",
+    "imageAlt": "Enohelia - UGC Creator",
+    "badgeTitle": "UGC",
+    "badgeSubtitle": "Creator"
+  },
+  "marquee": {
+    "items": ["BEAUTY", "SKINCARE", "LIFESTYLE", "WELLNESS", "PRODUCT DEMOS"]
+  },
+  "work": {
+    "eyebrow": "SELECTED CONTENT",
+    "title": "Featured Work",
+    "subtitle": "Authentic short-form content created for brands and social media.",
+    "videoAlt": "UGC video for {brand}",
+    "brands": {
+      "lavoir": "LAVOIR",
+      "boostion": "BOOSTION",
+      "flouren": "FLOUREN"
+    }
+  },
+  "about": {
+    "eyebrow": "MEET THE CREATOR",
+    "title": "Hi, I'm Enohelia.",
+    "p1": "I'm a UGC creator passionate about producing relatable, high-quality content that doesn't feel like traditional advertising.",
+    "p2": "My content focuses on beauty, skincare, lifestyle and wellness, combining authentic storytelling with visually engaging short-form video.",
+    "imageAlt": "About Enohelia",
+    "stat1Title": "UGC",
+    "stat1Label": "Short-form video",
+    "stat2Title": "4+",
+    "stat2Label": "Content niches",
+    "stat3Title": "3",
+    "stat3Label": "Social platforms"
+  },
+  "social": {
+    "eyebrow": "SOCIAL REACH",
+    "title": "38K+ Community",
+    "subtitle": "An engaged audience across TikTok, Instagram and Facebook.",
+    "followers": "Followers",
+    "tiktok": "TIKTOK",
+    "instagram": "INSTAGRAM",
+    "facebook": "FACEBOOK"
+  },
+  "services": {
+    "eyebrow": "WHAT I CREATE",
+    "title": "UGC Services",
+    "items": {
+      "productDemo": { "title": "Product Demo", "desc": "Clear and engaging demonstrations showing your product in action." },
+      "testimonials": { "title": "Testimonials", "desc": "Natural testimonial-style videos designed to build trust." },
+      "unboxing": { "title": "Unboxing", "desc": "Authentic first impressions and visually engaging unboxing content." },
+      "lifestyle": { "title": "Lifestyle", "desc": "Products naturally integrated into relatable everyday moments." },
+      "beauty": { "title": "Beauty & Skincare", "desc": "Product-focused beauty content, routines and before-and-after concepts." },
+      "voiceover": { "title": "Voiceover", "desc": "Short-form storytelling with clear voiceover and product visuals." }
+    }
+  },
+  "brands": {
+    "eyebrow": "BRAND COLLABORATIONS",
+    "title": "Brands I've Worked With",
+    "subtitle": "Creating authentic UGC content for beauty, skincare, haircare and lifestyle brands.",
+    "items": {
+      "lavoir": "Home & Lifestyle",
+      "boostion": "Beauty & Wellness",
+      "wishes": "Skincare",
+      "flouren": "Beauty",
+      "palmers": "Cocoa Butter",
+      "mediheal": "Skincare",
+      "headShoulders": "Scalp Serum",
+      "kiko": "Lip Volume"
+    }
+  },
+  "contact": {
+    "eyebrow": "LET'S CREATE TOGETHER",
+    "title": "Ready to bring your brand to life?",
+    "text": "Available for UGC collaborations, product demonstrations, testimonials and long-term partnerships.",
+    "cta": "Work With Me"
+  },
+  "footer": {
+    "name": "ENOHELIA MENDEZ",
+    "tagline": "UGC Creator · Beauty · Lifestyle · Wellness",
+    "builtBy": "Site built by JMTechLab"
+  }
+}

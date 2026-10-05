@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "title": "Enohelia Mendez | Creadora UGC",
+    "description": "Creadora UGC especializada en contenido de belleza, cuidado de la piel, estilo de vida y bienestar. Video corto auténtico para marcas que buscan resultados reales."
+  },
+  "nav": {
+    "work": "Trabajo",
+    "about": "Sobre mí",
+    "services": "Servicios",
+    "contact": "Trabajemos",
+    "langLabel": "Idioma"
+  },
+  "hero": {
+    "eyebrow": "CREADORA UGC · BELLEZA · ESTILO DE VIDA · BIENESTAR",
+    "titleLine1": "Contenido que se siente real.",
+    "titleLine2": "Historias que conectan.",
+    "text": "Creo contenido auténtico que detiene el scroll y ayuda a las marcas a conectar con personas reales y convertir la atención en acción.",
+    "ctaPrimary": "Ver mi trabajo",
+    "ctaSecondary": "Trabajemos juntos",
+    "imageAlt": "Enohelia - Creadora UGC",
+    "badgeTitle": "UGC",
+    "badgeSubtitle": "Creadora"
+  },
+  "marquee": {
+    "items": ["BELLEZA", "CUIDADO DE LA PIEL", "ESTILO DE VIDA", "BIENESTAR", "DEMOS DE PRODUCTO"]
+  },
+  "work": {
+    "eyebrow": "CONTENIDO SELECCIONADO",
+    "title": "Trabajo destacado",
+    "subtitle": "Contenido corto auténtico creado para marcas y redes sociales.",
+    "videoAlt": "Video UGC para {brand}",
+    "brands": {
+      "lavoir": "LAVOIR",
+      "boostion": "BOOSTION",
+      "flouren": "FLOUREN"
+    }
+  },
+  "about": {
+    "eyebrow": "CONOCE A LA CREADORA",
+    "title": "Hola, soy Enohelia.",
+    "p1": "Soy creadora UGC y me apasiona producir contenido cercano y de alta calidad que no se sienta como publicidad tradicional.",
+    "p2": "Mi contenido se centra en belleza, cuidado de la piel, estilo de vida y bienestar, combinando storytelling auténtico con video corto visualmente atractivo.",
+    "imageAlt": "Sobre Enohelia",
+    "stat1Title": "UGC",
+    "stat1Label": "Video corto",
+    "stat2Title": "4+",
+    "stat2Label": "Nichos de contenido",
+    "stat3Title": "3",
+    "stat3Label": "Plataformas sociales"
+  },
+  "social": {
+    "eyebrow": "ALCANCE SOCIAL",
+    "title": "Comunidad de 38K+",
+    "subtitle": "Una audiencia comprometida en TikTok, Instagram y Facebook.",
+    "followers": "Seguidores",
+    "tiktok": "TIKTOK",
+    "instagram": "INSTAGRAM",
+    "facebook": "FACEBOOK"
+  },
+  "services": {
+    "eyebrow": "LO QUE CREO",
+    "title": "Servicios UGC",
+    "items": {
+      "productDemo": { "title": "Demo de producto", "desc": "Demostraciones claras y atractivas que muestran tu producto en acción." },
+      "testimonials": { "title": "Testimonios", "desc": "Videos estilo testimonio natural, diseñados para generar confianza." },
+      "unboxing": { "title": "Unboxing", "desc": "Primeras impresiones auténticas y contenido de unboxing visualmente atractivo." },
+      "lifestyle": { "title": "Estilo de vida", "desc": "Productos integrados de forma natural en momentos cotidianos cercanos." },
+      "beauty": { "title": "Belleza y cuidado de la piel", "desc": "Contenido de belleza centrado en el producto, rutinas y conceptos antes/después." },
+      "voiceover": { "title": "Voz en off", "desc": "Storytelling corto con voz en off clara y visuales del producto." }
+    }
+  },
+  "brands": {
+    "eyebrow": "COLABORACIONES DE MARCA",
+    "title": "Marcas con las que he trabajado",
+    "subtitle": "Creando contenido UGC auténtico para marcas de belleza, cuidado de la piel, cabello y estilo de vida.",
+    "items": {
+      "lavoir": "Hogar y estilo de vida",
+      "boostion": "Belleza y bienestar",
+      "wishes": "Cuidado de la piel",
+      "flouren": "Belleza",
+      "palmers": "Manteca de cacao",
+      "mediheal": "Cuidado de la piel",
+      "headShoulders": "Sérum para cuero cabelludo",
+      "kiko": "Volumen de labios"
+    }
+  },
+  "contact": {
+    "eyebrow": "CREEMOS JUNTOS",
+    "title": "¿Lista para dar vida a tu marca?",
+    "text": "Disponible para colaboraciones UGC, demostraciones de producto, testimonios y alianzas a largo plazo.",
+    "cta": "Trabajemos"
+  },
+  "footer": {
+    "name": "ENOHELIA MENDEZ",
+    "tagline": "Creadora UGC · Belleza · Estilo de vida · Bienestar",
+    "builtBy": "Sitio creado por JMTechLab"
+  }
+}
