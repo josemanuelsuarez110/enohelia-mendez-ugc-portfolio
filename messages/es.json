@@ -9,7 +9,10 @@
     "services": "Servicios",
     "brands": "Marcas",
     "contact": "Trabajemos",
-    "langLabel": "Idioma"
+    "langLabel": "Idioma",
+    "label": "Navegación principal",
+    "menu": "Menú",
+    "close": "Cerrar"
   },
   "hero": {
     "eyebrow": "CREADORA UGC · BELLEZA · ESTILO DE VIDA · BIENESTAR",
@@ -303,5 +306,41 @@
     "contact": "Contacto",
     "follow": "Sígueme",
     "rights": "Todos los derechos reservados."
+  },
+  "interactive": {
+    "play": "Ver video de {brand}",
+    "poster": "Vista previa del video de {brand}",
+    "watch": "Ver proyecto",
+    "directVideo": "Abrir video directamente",
+    "close": "Cerrar",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "similar": "Quiero contenido para mi marca",
+    "videoError": "No se pudo cargar el video. Prueba el enlace directo."
+  },
+  "brief": {
+    "title": "Cuéntame tu idea",
+    "intro": "Prepara una propuesta en un minuto. Tú decides cuándo enviarla.",
+    "brand": "Nombre de tu marca *",
+    "format": "¿Qué contenido buscas?",
+    "formats": {
+      "demo": "Demo de producto",
+      "unboxing": "Unboxing",
+      "testimonial": "Testimonio",
+      "campaign": "Campaña de varios videos"
+    },
+    "details": "Objetivo y fecha deseada (opcional)",
+    "placeholder": "Producto, cantidad de videos, plataforma y fecha aproximada…",
+    "privacy": "Este formulario no envía ni guarda tus datos. Al continuar por correo o WhatsApp, compartirás el mensaje con ese servicio.",
+    "prepare": "Preparar propuesta",
+    "preview": "Tu propuesta está lista para revisar",
+    "template": "Hola Enohelia, soy de {brand}.\n\nMe interesa: {format}.\nDetalles: {details}\n\n¿Podemos conversar sobre disponibilidad, alcance y presupuesto?",
+    "toDiscuss": "Por definir juntos.",
+    "subject": "Propuesta UGC — {brand}",
+    "email": "Abrir correo",
+    "copy": "Copiar propuesta",
+    "copied": "Propuesta copiada",
+    "copyFailed": "No se pudo copiar. Puedes seleccionar y copiar el texto de arriba.",
+    "sendNote": "Todavía no se ha enviado. Revisa el texto y elige correo o WhatsApp."
   }
 }

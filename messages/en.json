@@ -9,7 +9,10 @@
     "services": "Services",
     "brands": "Brands",
     "contact": "Work With Me",
-    "langLabel": "Language"
+    "langLabel": "Language",
+    "label": "Main navigation",
+    "menu": "Menu",
+    "close": "Close"
   },
   "hero": {
     "eyebrow": "UGC CREATOR · BEAUTY · LIFESTYLE · WELLNESS",
@@ -303,5 +306,41 @@
     "contact": "Contact",
     "follow": "Follow",
     "rights": "All rights reserved."
+  },
+  "interactive": {
+    "play": "Watch {brand} video",
+    "poster": "Preview of {brand} video",
+    "watch": "Watch project",
+    "directVideo": "Open video directly",
+    "close": "Close",
+    "previous": "Previous",
+    "next": "Next",
+    "similar": "Create content for my brand",
+    "videoError": "The video could not load. Try the direct link."
+  },
+  "brief": {
+    "title": "Tell me your idea",
+    "intro": "Build a collaboration brief in a minute. You decide when to send it.",
+    "brand": "Your brand name *",
+    "format": "What content do you need?",
+    "formats": {
+      "demo": "Product demo",
+      "unboxing": "Unboxing",
+      "testimonial": "Testimonial",
+      "campaign": "Multi-video campaign"
+    },
+    "details": "Goal and preferred date (optional)",
+    "placeholder": "Product, number of videos, platform and approximate date…",
+    "privacy": "This form does not send or save your information. Continuing by email or WhatsApp shares the message with that service.",
+    "prepare": "Prepare brief",
+    "preview": "Your brief is ready to review",
+    "template": "Hi Enohelia, I am reaching out from {brand}.\n\nI am interested in: {format}.\nDetails: {details}\n\nCan we discuss availability, scope and budget?",
+    "toDiscuss": "To discuss together.",
+    "subject": "UGC collaboration — {brand}",
+    "email": "Open email",
+    "copy": "Copy brief",
+    "copied": "Brief copied",
+    "copyFailed": "Could not copy. You can select and copy the text above.",
+    "sendNote": "Nothing has been sent yet. Review your brief and choose email or WhatsApp."
   }
 }

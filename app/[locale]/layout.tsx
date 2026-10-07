@@ -70,7 +70,7 @@ const personJsonLd = {
   url: SITE_URL,
   image: `${SITE_URL}/images/enohelia-hero.png`,
   sameAs: [
-    "https://www.tiktok.com/enomendez0",
+    "https://www.tiktok.com/@enomendez0",
     "https://www.instagram.com/eno_mendez",
     "https://www.facebook.com/eno.mendez",
   ],
