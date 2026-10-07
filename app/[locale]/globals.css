@@ -560,3 +560,96 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .heroText {
   text-shadow: 0 1px 6px rgba(250, 247, 243, 0.9);
 }
+
+/* =========================================================
+   ANIMACIONES AL SCROLL
+   ========================================================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Respetar la preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Stagger: delays para elementos en grid */
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-stagger.is-visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-stagger.is-visible > *:nth-child(1) { transition-delay: 0s; }
+.reveal-stagger.is-visible > *:nth-child(2) { transition-delay: 0.08s; }
+.reveal-stagger.is-visible > *:nth-child(3) { transition-delay: 0.16s; }
+.reveal-stagger.is-visible > *:nth-child(4) { transition-delay: 0.24s; }
+.reveal-stagger.is-visible > *:nth-child(5) { transition-delay: 0.32s; }
+.reveal-stagger.is-visible > *:nth-child(6) { transition-delay: 0.4s; }
+.reveal-stagger.is-visible > *:nth-child(7) { transition-delay: 0.48s; }
+.reveal-stagger.is-visible > *:nth-child(8) { transition-delay: 0.56s; }
+.reveal-stagger.is-visible > *:nth-child(9) { transition-delay: 0.64s; }
+
+/* =========================================================
+   AJUSTES PARA MÓVIL — Hero y nav transparentes
+   ========================================================= */
+
+@media (max-width: 768px) {
+  /* Hero: quitar background-attachment fixed (no funciona en móvil) */
+  .hero {
+    background-attachment: scroll;
+    background-position: center top;
+    background-size: cover;
+  }
+
+  /* Nav: hacerlo más visible en móvil para que no se pierda */
+  .nav {
+    background: rgba(250, 247, 243, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}
+
+/* =========================================================
+   AJUSTES MÓVIL — Hero transparente sin background-attachment
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .hero {
+    /* En móvil, background-attachment:fixed no funciona.
+       Usamos scroll y ajustamos la posición para que se vea el rostro. */
+    background-attachment: scroll !important;
+    background-position: center 15% !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    /* Mantener el overlay más transparente para que se note */
+    background-image:
+      linear-gradient(180deg, rgba(250, 247, 243, 0.5) 0%, rgba(250, 247, 243, 0.75) 100%),
+      url('/images/enohelia-portrait.jpg') !important;
+  }
+
+  /* El nav en móvil: fondo con blur pero más opaco */
+  .nav {
+    background: rgba(250, 247, 243, 0.85) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+  }
+}
