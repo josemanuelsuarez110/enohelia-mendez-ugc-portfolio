@@ -40,10 +40,10 @@ export default function Home() {
         </div>
         <div className="heroImage">
           <Image
-            src="/images/enohelia-hero.png"
+            src="/images/enohelia-portrait.jpg"
             alt={t("hero.imageAlt")}
-            width={600}
-            height={800}
+            width={1134}
+            height={2293}
             priority
             sizes="(max-width: 768px) 100vw, 50vw"
           />
@@ -70,10 +70,10 @@ export default function Home() {
       <section id="about" className="about">
         <div className="aboutImage">
           <Image
-            src="/images/enohelia-about.png"
+            src="/images/enohelia-beach.jpg"
             alt={t("about.imageAlt")}
-            width={600}
-            height={800}
+            width={1290}
+            height={2282}
             loading="lazy"
             sizes="(max-width: 768px) 100vw, 50vw"
           />
