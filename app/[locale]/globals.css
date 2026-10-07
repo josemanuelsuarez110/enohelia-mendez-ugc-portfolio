@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #faf7f3;
-  --background-end: #f5efe8;
-  --foreground: #171412;
-  --accent: #b35f4b;
-  --accent-soft: #c47b6a;
-  --secondary: #8b6f5e;
-  --gold: #c9a961;
-  --soft: #eee3dc;
+  --background: #FAF7F3;
+  --background-end: #F5EFE8;
+  --foreground: #0F1729;
+  --accent: #C9A227;
+  --accent-soft: #DDB856;
+  --secondary: #1E3A5F;
+  --gold: #C9A227;
+  --soft: #E8E3DA;
   --white: #ffffff;
   --shadow-soft: 0 4px 20px rgba(23, 20, 18, 0.06);
   --shadow-medium: 0 10px 40px rgba(23, 20, 18, 0.10);
@@ -446,19 +446,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 }
 
 /* Editorial palette: plum, warm ivory, rose and muted gold. */
-:root {
-  --background: #faf6f2;
-  --background-end: #f0e6e8;
-  --foreground: #30212c;
-  --accent: #713d58;
-  --accent-soft: #b78095;
-  --secondary: #715b68;
-  --gold: #aa8755;
-  --soft: #eadde3;
-  --shadow-soft: 0 8px 32px rgba(65, 35, 52, .055);
-  --shadow-medium: 0 16px 44px rgba(65, 35, 52, .11);
-  --shadow-strong: 0 24px 65px rgba(65, 35, 52, .18);
-}
+
 body { background: var(--background); }
 .nav { max-width: none; padding-inline: max(30px, calc((100vw - 1190px) / 2)); background: rgba(250,246,242,.94); border-bottom: 1px solid var(--soft); }
 .logo { font-size: 18px; letter-spacing: 2.7px; }
@@ -475,7 +463,7 @@ body { background: var(--background); }
 .heroImage img { border-radius: 210px 210px 16px 16px; aspect-ratio: 3 / 4; object-fit: cover; }
 .imageBadge { left: -22px; bottom: 42px; background: #fffaf6; padding: 20px 28px; border: 1px solid var(--soft); border-radius: 4px; transform: rotate(-4deg); }
 .imageBadge strong { color: var(--accent); font-family: var(--font-display); font-size: 25px; letter-spacing: 1px; }
-.marquee { animation: none; background: #402637; padding: 23px 24px; flex-wrap: wrap; justify-content: center; gap: 16px 40px; white-space: normal; }
+.marquee { animation: none; background: #1E3A5F; padding: 23px 24px; flex-wrap: wrap; justify-content: center; gap: 16px 40px; white-space: normal; color: #FAF7F3; }
 .marquee span { color: #f4e8e8; font-size: 10px; letter-spacing: 2.6px; }
 .marquee span::before { content: "✦"; color: #c6a677; margin-right: 20px; }
 .section, .socialReach, .brandsSection, .caseStudy, .testimonials, .mediaKit { padding-top: 96px; padding-bottom: 96px; }
@@ -489,7 +477,7 @@ body { background: var(--background); }
 .videoPreview img { max-height: 520px; }
 .videoCard h3 { margin-top: 24px; font-size: 21px; letter-spacing: 2px; }
 .videoDownload { color: var(--secondary); }
-.about { max-width: none; padding: 84px max(30px, calc((100vw - 1190px) / 2)); background: #eee2e6; gap: 80px; }
+.about { max-width: none; padding: 84px max(30px, calc((100vw - 1190px) / 2)); background: #FAF7F3; gap: 80px; }
 .aboutImage { max-width: 470px; }
 .aboutImage img { border-radius: 12px 120px 12px 12px; }
 .aboutContent h2 { font-size: clamp(36px, 4vw, 52px); }
@@ -508,7 +496,7 @@ body { background: var(--background); }
 .brandsGrid { gap: 12px; }
 .brandCard { background: transparent; border-radius: 6px; }
 .platformsContainer { gap: 38px; }
-.mediaKit { max-width: none; padding-inline: max(30px, calc((100vw - 1190px) / 2)); background: #3e2938; color: #fff7f2; }
+.mediaKit { max-width: none; padding-inline: max(30px, calc((100vw - 1190px) / 2)); background: #1E3A5F; color: #FAF7F3; }
 .mediaKit .sectionHeading h2, .mediaKit .sectionHeading > p:last-child { color: #fff7f2; }
 .mediaKit .eyebrow { color: #d8b5c7; }
 .mediaKitCard { border-radius: 10px; background: #faf6f2; color: var(--foreground); border: 1px solid #d7bfca; }
