@@ -46,7 +46,7 @@ export default function Home() {
         </div>
         <div className="heroImage">
           <Image
-            src="/images/enohelia-portrait.jpg"
+            src="/images/enohelia-hero-nueva.jpg"
             alt={t("hero.imageAlt")}
             width={1134}
             height={2293}
