@@ -143,10 +143,6 @@
           "mediheal": {
             "name": "MEDIHEAL",
             "category": "Cuidado de la piel"
-          },
-          "wishes": {
-            "name": "9WISHES",
-            "category": "Cuidado de la piel"
           }
         }
       },
@@ -161,10 +157,6 @@
           "headShoulders": {
             "name": "HEAD & SHOULDERS",
             "category": "Cuidado del cuero cabelludo"
-          },
-          "mediheal": {
-            "name": "MEDIHEAL",
-            "category": "Cuidado de la piel"
           }
         }
       },
