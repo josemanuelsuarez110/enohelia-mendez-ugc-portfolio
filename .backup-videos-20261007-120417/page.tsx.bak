@@ -3,15 +3,9 @@ import { PortfolioNav, VideoGallery, CollaborationBrief } from "@/components/Por
 import { useTranslations } from "next-intl";
 
 const videoKeys = [
-  { src: "/videos/ugc-01-web.mp4", poster: "/videos/ugc-01-poster.jpg", brandKey: "lavoir" },
-  { src: "/videos/ugc-02-web.mp4", poster: "/videos/ugc-02-poster.jpg", brandKey: "boostion" },
+  { src: "/videos/ugc-01-web.mp4", poster: "/videos/ugc-01-poster.jpg", brandKey: "boostion" },
+  { src: "/videos/ugc-02-web.mp4", poster: "/videos/ugc-02-poster.jpg", brandKey: "lavoir" },
   { src: "/videos/ugc-03-web.mp4", poster: "/videos/ugc-03-poster.jpg", brandKey: "flouren" },
-  { src: "/videos/ugc-04-web.mp4", poster: "/videos/ugc-04-poster.jpg", brandKey: "9wishes" },
-  { src: "/videos/ugc-05-web.mp4", poster: "/videos/ugc-05-poster.jpg", brandKey: "imFrom" },
-  { src: "/videos/ugc-06-web.mp4", poster: "/videos/ugc-06-poster.jpg", brandKey: "pixi" },
-  { src: "/videos/ugc-07-web.mp4", poster: "/videos/ugc-07-poster.jpg", brandKey: "kikoMilano" },
-  { src: "/videos/ugc-08-web.mp4", poster: "/videos/ugc-08-poster.jpg", brandKey: "nivea" },
-  { src: "/videos/ugc-09-web.mp4", poster: "/videos/ugc-09-poster.jpg", brandKey: "headShoulders" },
 ] as const;
 
 const serviceKeys = ["productDemo", "testimonials", "unboxing", "lifestyle", "beauty", "voiceover"] as const;
