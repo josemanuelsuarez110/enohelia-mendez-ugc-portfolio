@@ -542,3 +542,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   .marquee span::before { margin-right: 10px; }
 }
 @media (max-width: 480px) { .logo { font-size: 15px; letter-spacing: 1.3px; } .videoGrid { gap: 36px; } }
+
+/* Keep the supplied portraits naturally framed on all screen sizes. */
+.heroImage img { object-position: center 25%; }
+.aboutImage img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: center 65%; }

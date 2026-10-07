@@ -68,7 +68,7 @@ const personJsonLd = {
   name: "Enohelia Mendez",
   jobTitle: "UGC Creator",
   url: SITE_URL,
-  image: `${SITE_URL}/images/enohelia-hero.png`,
+  image: `${SITE_URL}/images/enohelia-portrait.jpg`,
   sameAs: [
     "https://www.tiktok.com/@enomendez0",
     "https://www.instagram.com/eno_mendez",
