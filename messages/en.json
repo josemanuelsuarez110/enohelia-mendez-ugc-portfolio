@@ -179,6 +179,10 @@
           "morphe": {
             "name": "MORPHE",
             "category": "Makeup Brushes"
+          },
+          "nivea": {
+            "name": "NIVEA",
+            "category": "Skincare"
           }
         }
       }
