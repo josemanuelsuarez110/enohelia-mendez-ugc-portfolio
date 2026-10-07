@@ -1,9 +1,10 @@
 import Image from "next/image";
+import { PortfolioNav, VideoGallery, CollaborationBrief } from "@/components/PortfolioInteractions";
 import { useTranslations } from "next-intl";
 
 const videoKeys = [
-  { src: "/videos/ugc-01-web.mp4", poster: "/videos/ugc-01-poster.jpg", brandKey: "lavoir" },
-  { src: "/videos/ugc-02-web.mp4", poster: "/videos/ugc-02-poster.jpg", brandKey: "boostion" },
+  { src: "/videos/ugc-01-web.mp4", poster: "/videos/ugc-01-poster.jpg", brandKey: "boostion" },
+  { src: "/videos/ugc-02-web.mp4", poster: "/videos/ugc-02-poster.jpg", brandKey: "lavoir" },
   { src: "/videos/ugc-03-web.mp4", poster: "/videos/ugc-03-poster.jpg", brandKey: "flouren" },
 ] as const;
 
@@ -15,23 +16,14 @@ type PlatformBrand = { name: string; category: string };
 export default function Home() {
   const t = useTranslations();
   const marqueeItems = t.raw("marquee.items") as string[];
-  const testimonials = t.raw("testimonials.items") as { quote: string; author: string; role: string }[];
-  const caseResults = t.raw("caseStudy.results") as string[];
-  const caseDeliverables = t.raw("caseStudy.deliverables") as string[];
+  const testimonials = (t.raw("testimonials.items") as { quote: string; author: string; role: string }[]).filter((item) => ![item.quote, item.author, item.role].some((value) => value.includes("[")));
+  const caseResults = (t.raw("caseStudy.results") as string[]).filter((value) => !value.includes("["));
+  const caseDeliverables = (t.raw("caseStudy.deliverables") as string[]).filter((value) => !value.includes("["));
   const faqItems = t.raw("faq.items") as { question: string; answer: string }[];
 
   return (
     <main>
-      <nav className="nav" aria-label="Main navigation">
-        <a href="#" className="logo">ENOHELIA MENDEZ</a>
-        <div className="navLinks">
-          <a href="#work">{t("nav.work")}</a>
-          <a href="#about">{t("nav.about")}</a>
-          <a href="#services">{t("nav.services")}</a>
-          <a href="#brands">{t("nav.brands")}</a>
-          <a href="#contact" className="navButton">{t("nav.contact")}</a>
-        </div>
-      </nav>
+      <PortfolioNav />
 
       <section className="hero">
         <div className="heroContent">
@@ -72,26 +64,7 @@ export default function Home() {
           <h2>{t("work.title")}</h2>
           <p>{t("work.subtitle")}</p>
         </div>
-        <div className="videoGrid">
-          {videoKeys.map((v) => {
-            const brand = t(`work.brands.${v.brandKey}`);
-            return (
-              <article className="videoCard" key={v.src}>
-                <video
-                  src={v.src}
-                  poster={v.poster}
-                  controls
-                  playsInline
-                  preload="none"
-                  width={720}
-                  height={1280}
-                  aria-label={t("work.videoAlt", { brand })}
-                />
-                <h3>{brand}</h3>
-              </article>
-            );
-          })}
-        </div>
+        <VideoGallery videos={videoKeys.map((video) => ({ ...video, brand: t(`work.brands.${video.brandKey}`) }))} />
       </section>
 
       <section id="about" className="about">
@@ -125,7 +98,7 @@ export default function Home() {
           <p>{t("social.subtitle")}</p>
         </div>
         <div className="socialGrid">
-          <a href="https://www.tiktok.com/enomendez0" target="_blank" rel="noopener noreferrer" className="socialCard" aria-label="TikTok profile">
+          <a href="https://www.tiktok.com/@enomendez0" target="_blank" rel="noopener noreferrer" className="socialCard" aria-label="TikTok profile">
             <span>{t("social.tiktok")}</span><strong>10.1K</strong><p>{t("social.followers")}</p><small>@enomendez0 →</small>
           </a>
           <a href="https://www.instagram.com/eno_mendez" target="_blank" rel="noopener noreferrer" className="socialCard" aria-label="Instagram profile">
@@ -183,7 +156,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="caseStudy">
+      {caseResults.length > 0 && caseDeliverables.length > 0 && <section className="caseStudy">
         <div className="sectionHeading">
           <p className="eyebrow">{t("caseStudy.eyebrow")}</p>
           <h2>{t("caseStudy.title")}</h2>
@@ -206,9 +179,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section>}
 
-      <section className="testimonials">
+      {testimonials.length > 0 && <section className="testimonials">
         <div className="sectionHeading">
           <p className="eyebrow">{t("testimonials.eyebrow")}</p>
           <h2>{t("testimonials.title")}</h2>
@@ -224,7 +197,7 @@ export default function Home() {
             </blockquote>
           ))}
         </div>
-      </section>
+      </section>}
 
       <section className="mediaKit">
         <div className="sectionHeading">
@@ -270,9 +243,10 @@ export default function Home() {
         <p className="eyebrow">{t("contact.eyebrow")}</p>
         <h2>{t("contact.title")}</h2>
         <p>{t("contact.text")}</p>
-        <a href="mailto:enoheliamendezmendez@gmail.com" className="contactButton">{t("contact.cta")}</a>
+        <CollaborationBrief />
+        <a href="mailto:enoheliamendezmendez@gmail.com" className="directContact">enoheliamendezmendez@gmail.com</a>
         <div className="socials">
-          <a href="https://www.tiktok.com/enomendez0" target="_blank" rel="noopener noreferrer">TikTok</a>
+          <a href="https://www.tiktok.com/@enomendez0" target="_blank" rel="noopener noreferrer">TikTok</a>
           <a href="https://www.instagram.com/eno_mendez" target="_blank" rel="noopener noreferrer">Instagram</a>
           <a href="https://www.facebook.com/eno.mendez" target="_blank" rel="noopener noreferrer">Facebook</a>
         </div>
@@ -287,7 +261,7 @@ export default function Home() {
           <div>
             <a href="mailto:enoheliamendezmendez@gmail.com">enoheliamendezmendez@gmail.com</a>
             <div className="footerSocials">
-              <a href="https://www.tiktok.com/enomendez0" target="_blank" rel="noopener noreferrer" aria-label="TikTok">TikTok</a>
+              <a href="https://www.tiktok.com/@enomendez0" target="_blank" rel="noopener noreferrer" aria-label="TikTok">TikTok</a>
               <a href="https://www.instagram.com/eno_mendez" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
               <a href="https://www.facebook.com/eno.mendez" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
             </div>
