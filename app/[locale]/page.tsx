@@ -27,8 +27,48 @@ export default function Home() {
   const caseDeliverables = (t.raw("caseStudy.deliverables") as string[]).filter((value) => !value.includes("["));
   const faqItems = t.raw("faq.items") as { question: string; answer: string }[];
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Enohelia Mendez",
+      "alternateName": "eno_mendez",
+      "description": "Creadora UGC especializada en belleza, skincare, lifestyle y hogar",
+      "image": "https://enohelia-mendez-ugc-portfolio.vercel.app/images/enohelia-hero-nueva.jpg",
+      "sameAs": [
+        "https://www.tiktok.com/enomendez0",
+        "https://www.instagram.com/eno_mendez",
+        "https://www.facebook.com/eno.mendez"
+      ],
+      "knowsAbout": ["Belleza", "Skincare", "Lifestyle", "Hogar"],
+      "agentInteractionStatistic": [
+        {
+          "@type": "InteractionCounter",
+          "interactionType": "https://schema.org/FollowAction",
+          "userInteractionCount": 10100
+        },
+        {
+          "@type": "InteractionCounter",
+          "interactionType": "https://schema.org/FollowAction",
+          "userInteractionCount": 9000
+        },
+        {
+          "@type": "InteractionCounter",
+          "interactionType": "https://schema.org/FollowAction",
+          "userInteractionCount": 18900
+        }
+      ]
+    }
+  };
+
   return (
-    <main>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
+      />
+      <main>
       <PortfolioNav />
 
       <section className="hero">
@@ -277,6 +317,7 @@ export default function Home() {
           <p>© {new Date().getFullYear()} {t("footer.name")} · {t("footer.rights")}</p>
         </div>
       </footer>
-    </main>
+      </main>
+    </>
   );
 }
