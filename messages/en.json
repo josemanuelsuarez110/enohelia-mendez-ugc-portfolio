@@ -358,39 +358,48 @@
     "items": {
       "capcut": {
         "name": "CapCut",
-        "category": "editing"
+        "category": "editing",
+        "icon": "🎬"
       },
       "premiere": {
         "name": "Adobe Premiere Pro",
-        "category": "editing"
+        "category": "editing",
+        "icon": "🎞️"
       },
       "canva": {
         "name": "Canva",
-        "category": "design"
+        "category": "design",
+        "icon": "🎨"
       },
       "iphone": {
         "name": "iPhone 14 Pro Max",
-        "category": "recording"
+        "category": "recording",
+        "icon": "📱"
       },
       "ringlight": {
         "name": "Neewer Ring Light",
-        "category": "recording"
+        "category": "recording",
+        "icon": "💡"
       },
       "microphone": {
         "name": "Microphone",
-        "category": "recording"
+        "category": "recording",
+        "icon": "🎙️"
       },
       "tripod": {
         "name": "Tripod",
-        "category": "recording"
+        "category": "recording",
+        "icon": "📐"
       },
       "camera": {
         "name": "Camera",
-        "category": "recording"
+        "category": "recording",
+        "icon": "📷"
       },
       "insense": {
         "name": "Insense",
-        "category": "platforms"
+        "category": "platforms",
+        "icon": "🌐"
       }
     }
   }

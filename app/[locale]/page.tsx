@@ -209,8 +209,9 @@ export default function Home() {
           <p>{t("tools.subtitle")}</p>
         </div>
         <div className="toolsGrid">
-          {Object.entries(t.raw("tools.items") as Record<string, { name: string; category: string }>).map(([key, tool]) => (
+          {Object.entries(t.raw("tools.items") as Record<string, { name: string; category: string; icon: string }>).map(([key, tool]) => (
             <div className="toolCard" key={key}>
+              <span className="toolIcon" aria-hidden="true">{tool.icon}</span>
               <strong>{tool.name}</strong>
               <span>{t(`tools.categories.${tool.category}`)}</span>
             </div>
