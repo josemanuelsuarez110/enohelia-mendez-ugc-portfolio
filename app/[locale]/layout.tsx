@@ -5,6 +5,7 @@ import { routing } from "@/i18n/routing";
 import { getTranslations } from "next-intl/server";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -116,6 +117,7 @@ export default async function LocaleLayout({
             </svg>
           </a>
         </NextIntlClientProvider>
+        <GoogleAnalytics gaId="G-GQN2J37P40" />
       </body>
     </html>
   );
