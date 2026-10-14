@@ -202,6 +202,22 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="tools" className="toolsSection">
+        <div className="sectionHeading">
+          <p className="eyebrow">{t("tools.eyebrow")}</p>
+          <h2>{t("tools.title")}</h2>
+          <p>{t("tools.subtitle")}</p>
+        </div>
+        <div className="toolsGrid">
+          {Object.entries(t.raw("tools.items") as Record<string, { name: string; category: string }>).map(([key, tool]) => (
+            <div className="toolCard" key={key}>
+              <strong>{tool.name}</strong>
+              <span>{t(`tools.categories.${tool.category}`)}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {caseResults.length > 0 && caseDeliverables.length > 0 && <section className="caseStudy">
         <div className="sectionHeading">
           <p className="eyebrow">{t("caseStudy.eyebrow")}</p>

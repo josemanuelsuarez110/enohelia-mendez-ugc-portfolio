@@ -344,5 +344,54 @@
     "copied": "¡Copiado al portapapeles!",
     "copyFailed": "No se pudo copiar. Puedes seleccionar y copiar el texto de arriba.",
     "sendNote": "Elige cómo quieres enviarla."
+  },
+  "tools": {
+    "eyebrow": "MI STACK DE TRABAJO",
+    "title": "Herramientas con las que trabajo",
+    "subtitle": "Tecnología, software y plataformas que uso para crear contenido UGC profesional.",
+    "categories": {
+      "editing": "Edición",
+      "design": "Diseño",
+      "recording": "Grabación",
+      "platforms": "Plataformas UGC"
+    },
+    "items": {
+      "capcut": {
+        "name": "CapCut",
+        "category": "editing"
+      },
+      "premiere": {
+        "name": "Adobe Premiere Pro",
+        "category": "editing"
+      },
+      "canva": {
+        "name": "Canva",
+        "category": "design"
+      },
+      "iphone": {
+        "name": "iPhone 14 Pro Max",
+        "category": "recording"
+      },
+      "ringlight": {
+        "name": "Ring light Neewer",
+        "category": "recording"
+      },
+      "microphone": {
+        "name": "Micrófono",
+        "category": "recording"
+      },
+      "tripod": {
+        "name": "Trípode",
+        "category": "recording"
+      },
+      "camera": {
+        "name": "Cámara",
+        "category": "recording"
+      },
+      "insense": {
+        "name": "Insense",
+        "category": "platforms"
+      }
+    }
   }
 }
