@@ -335,14 +335,14 @@
     "placeholder": "Product, number of videos, platform and approximate date…",
     "privacy": "This form does not send or save your information. Continuing by email or WhatsApp shares the message with that service.",
     "prepare": "Prepare brief",
-    "preview": "Your brief is ready to review",
+    "preview": "Ready to send!",
     "template": "Hi Enohelia, I am reaching out from {brand}.\n\nI am interested in: {format}.\nDetails: {details}\n\nCan we discuss availability, scope and budget?",
     "toDiscuss": "To discuss together.",
     "subject": "UGC collaboration — {brand}",
-    "email": "Open email",
+    "email": "📧 Open email",
     "copy": "Copy brief",
-    "copied": "Brief copied",
+    "copied": "Copied to clipboard!",
     "copyFailed": "Could not copy. You can select and copy the text above.",
-    "sendNote": "Nothing has been sent yet. Review your brief and choose email or WhatsApp."
+    "sendNote": "Choose how to send it."
   }
 }

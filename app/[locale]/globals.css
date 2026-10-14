@@ -653,3 +653,102 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
     -webkit-backdrop-filter: blur(12px) !important;
   }
 }
+
+/* =========================================================
+   Bloque de confirmación "Propuesta lista" (con animación)
+   ========================================================= */
+
+.briefResult {
+  position: relative;
+  margin-top: 28px;
+  padding: 32px 24px 24px;
+  border-radius: 16px;
+  background: linear-gradient(135deg,
+    color-mix(in srgb, var(--accent) 8%, var(--background)) 0%,
+    color-mix(in srgb, var(--accent) 3%, var(--background)) 100%);
+  border: 2px solid var(--accent);
+  box-shadow: 0 8px 32px rgba(201, 162, 39, 0.15);
+  animation: briefCelebration 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes briefCelebration {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-4px) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Ícono de check al lado del título */
+.briefResult h4 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.briefResult h4::before {
+  content: "✓";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--background);
+  font-size: 18px;
+  font-weight: 900;
+  flex-shrink: 0;
+  animation: checkPop 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.3s both;
+}
+
+@keyframes checkPop {
+  0% { transform: scale(0); }
+  70% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+/* Área de acciones más destacada */
+.briefResult .briefActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
+  margin-top: 16px;
+}
+
+/* Mensaje de status más legible */
+.briefResult [role="status"] {
+  font-size: 13px;
+  margin-top: 16px;
+  color: var(--foreground);
+  opacity: 0.75;
+}
+
+/* Móvil: reducir un poco el efecto */
+@media (max-width: 768px) {
+  .briefResult {
+    padding: 24px 18px 18px;
+    animation-duration: 0.45s;
+  }
+  .briefResult h4 {
+    font-size: 18px;
+  }
+  .briefResult h4::before {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
+}

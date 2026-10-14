@@ -335,14 +335,14 @@
     "placeholder": "Producto, cantidad de videos, plataforma y fecha aproximada…",
     "privacy": "Este formulario no envía ni guarda tus datos. Al continuar por correo o WhatsApp, compartirás el mensaje con ese servicio.",
     "prepare": "Preparar propuesta",
-    "preview": "Tu propuesta está lista para revisar",
+    "preview": "¡Propuesta lista para enviar!",
     "template": "Hola Enohelia, soy de {brand}.\n\nMe interesa: {format}.\nDetalles: {details}\n\n¿Podemos conversar sobre disponibilidad, alcance y presupuesto?",
     "toDiscuss": "Por definir juntos.",
     "subject": "Propuesta UGC — {brand}",
-    "email": "Abrir correo",
+    "email": "📧 Abrir correo",
     "copy": "Copiar propuesta",
-    "copied": "Propuesta copiada",
+    "copied": "¡Copiado al portapapeles!",
     "copyFailed": "No se pudo copiar. Puedes seleccionar y copiar el texto de arriba.",
-    "sendNote": "Todavía no se ha enviado. Revisa el texto y elige correo o WhatsApp."
+    "sendNote": "Elige cómo quieres enviarla."
   }
 }
