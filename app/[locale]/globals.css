@@ -1131,3 +1131,17 @@ h1, h2, h3 {
   opacity: 0.95;
   font-weight: 500;
 }
+
+/* =========================================================
+   Enlace "Abrir video directamente" en dorado
+   ========================================================= */
+.videoDownload {
+  color: #C9A227 !important;
+  opacity: 0.9;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.videoDownload:hover {
+  color: #DDB856 !important;
+  opacity: 1;
+}
