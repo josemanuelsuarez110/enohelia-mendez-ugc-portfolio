@@ -3,18 +3,18 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { getTranslations } from "next-intl/server";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Outfit } from "next/font/google";
 import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
-const playfair = Playfair_Display({
+const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
-const inter = Inter({
+const outfitBody = Outfit({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
@@ -90,7 +90,7 @@ export default async function LocaleLayout({
   if (!hasLocale(routing.locales, locale)) notFound();
 
   return (
-    <html lang={locale} className={`${playfair.variable} ${inter.variable}`}>
+    <html lang={locale} className={`${outfit.variable} ${outfitBody.variable}`}>
       <head>
         <link rel="preconnect" href="https://www.tiktok.com" />
         <link rel="preconnect" href="https://www.instagram.com" />
